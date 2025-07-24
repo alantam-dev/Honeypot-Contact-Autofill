@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Visibility Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 20px 0 5px;
+    }
+
+    /* NAME field (positioned far off to the left) */
+    #name {
+      position: absolute;
+      left: -9999px;
+    }
+
+    /* EMAIL field (hidden using visibility) */
+    #email {
+      visibility: hidden;
+    }
+
+    /* PHONE NUMBER field (hidden using opacity) */
+    #phone {
+      opacity: 0;
+    }
+
+    /* ADDRESS LINE 1 (fully visible) */
+    #address {
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" />
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" />
+
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" name="phone" />
+
+  <label for="address">Address Line 1</label>
+  <input type="text" id="address" name="address" />
+
+</body>
+</html>
